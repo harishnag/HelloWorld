@@ -13,4 +13,4 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker push harishnag/newrepo:fromnodecontainer 
+      - docker push harishnag/helloworld:fromnodecontainer
