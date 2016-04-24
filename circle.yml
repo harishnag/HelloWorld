@@ -1,0 +1,16 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+
+  pre:
+    - docker version
+    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+    - docker build -t harishnag/helloworld:fromnodecontainer .
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker push harishnag/newrepo:fromnodecontainer 
